@@ -1,6 +1,7 @@
 package fr.creperie.model;
 
-abstract class Marchandise {
+public abstract class Marchandise {
+	
 	
 	protected String name;
 	protected String code;
@@ -14,11 +15,6 @@ abstract class Marchandise {
 		this.price = price;
 		
 	}
-
-	 
-	 
-	 
-	 
 	 
 	 
 
@@ -47,6 +43,11 @@ abstract class Marchandise {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	public String toString(){
+		
+		return this.name + " " + this.code + " " + this.price;
 	}
 
 }
