@@ -1,4 +1,4 @@
-package executable;
+package fr.creperie.dao;
 
 import java.util.ArrayList;
 
