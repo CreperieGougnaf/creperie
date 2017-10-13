@@ -30,6 +30,7 @@ public class DaoMarchandise {
 	}
 
 	public boolean delete(){
+		return false;
 		
 	}
 
