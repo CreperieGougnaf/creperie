@@ -29,8 +29,10 @@ public class DaoMarchandise {
 		return false;
 	}
 
-	public boolean delete(){
-		return false;
+	public boolean delete(Marchandise produit){
+		
+		produits.remove(produit);
+		return true;
 		
 	}
 
