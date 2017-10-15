@@ -7,8 +7,21 @@ public class DaoMarchandise {
 
 	ArrayList<Marchandise> produits = new ArrayList<>();
 	
+	public void initMarchandise(){
+		
+		Marchandise marchandise1 = new Crepe("La Dame Blanche", "DM", 7);
+		produits.add(marchandise1);
+		Marchandise marchandise2 = new Crepe("La Belle Hélène", "BH", 6);
+		produits.add(marchandise2);
+		Marchandise marchandise3 = new Crepe("La Dugesclin", "DG", 8);
+		produits.add(marchandise3);
+		
+		
+		
+		
+	}
 	
-	ArrayList<Marchandise> show(){
+	public ArrayList<Marchandise> show(){
 		return produits;
 	}
 
@@ -29,12 +42,12 @@ public class DaoMarchandise {
 		return false;
 	}
 
-	public boolean delete(Marchandise produitSuppr, String code){
+	public boolean delete(String code){
 		
 	 for(Marchandise produit : show()){
 		 
 		 if(produit.getCode().equals(code)){
-			 produits.remove(produitSuppr);
+			 produits.remove(produit);
 			 return true;
 		 }
 		 
