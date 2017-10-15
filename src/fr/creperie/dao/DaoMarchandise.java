@@ -29,10 +29,17 @@ public class DaoMarchandise {
 		return false;
 	}
 
-	public boolean delete(Marchandise produit){
+	public boolean delete(Marchandise produitSuppr, String code){
 		
-		produits.remove(produit);
-		return true;
+	 for(Marchandise produit : show()){
+		 
+		 if(produit.getCode().equals(code)){
+			 produits.remove(produitSuppr);
+			 return true;
+		 }
+		 
+	 }
+	 return false;
 		
 	}
 
