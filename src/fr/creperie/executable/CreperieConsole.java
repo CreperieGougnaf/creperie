@@ -1,7 +1,6 @@
 package fr.creperie.executable;
 
-import java.util.HashMap;
-import java.util.Locale;
+
 import java.util.*;
 
 import fr.creperie.ihm.*;
@@ -16,11 +15,18 @@ public class CreperieConsole {
 		Scanner clavier = new Scanner(System.in).useLocale(Locale.US);
 		
 		DaoMarchandise dao = new DaoMarchandise();
+		dao.initMarchandise();
+		
+		
+		for(Marchandise produit : dao.findAll()){
+			
+			System.out.println(produit);
+		}
 		
 		Map<String, Menu> options = new TreeMap<>();
 		
 		options.put("1", new ListerMarchandise(dao, clavier));
-
+		
 		
 		
 		

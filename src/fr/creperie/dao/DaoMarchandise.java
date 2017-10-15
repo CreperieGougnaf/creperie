@@ -5,7 +5,7 @@ import fr.creperie.model.*;
 
 public class DaoMarchandise {
 
-	ArrayList<Marchandise> produits = new ArrayList<>();
+	private ArrayList<Marchandise> produits = new ArrayList<>();
 	
 	public void initMarchandise(){
 		
@@ -21,7 +21,7 @@ public class DaoMarchandise {
 		
 	}
 	
-	public ArrayList<Marchandise> show(){
+	public ArrayList<Marchandise> findAll(){
 		return produits;
 	}
 
@@ -31,7 +31,7 @@ public class DaoMarchandise {
 	}
 
 	public boolean update(Marchandise newProduit, String code){
-		for(Marchandise produit : show()){
+		for(Marchandise produit : produits){
 			
 			if(produit.getCode().equals(code)){
 				produits.remove(produit);
@@ -44,7 +44,7 @@ public class DaoMarchandise {
 
 	public boolean delete(String code){
 		
-	 for(Marchandise produit : show()){
+	 for(Marchandise produit : produits){
 		 
 		 if(produit.getCode().equals(code)){
 			 produits.remove(produit);
